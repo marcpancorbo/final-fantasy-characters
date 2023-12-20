@@ -1,0 +1,5 @@
+<div class="games">
+  @for( game of $games(); track game.gameId) {
+  <app-game [game]="game"></app-game>
+  }
+</div>

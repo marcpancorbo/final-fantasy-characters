@@ -1,0 +1,6 @@
+<div>
+  <img [src]="game.picture" alt="{{ game.title }}" />
+  <h1>{{ game.title }}</h1>
+  <p>{{ game.description }}</p>
+  <a [routerLink]="['./', game.title]">Go to detail</a>
+</div>

@@ -1,0 +1,11 @@
+@if($loading()){
+<p-progressSpinner></p-progressSpinner>
+}@else { @defer(when !$loading() ){
+<div class="characters">
+  @for (character of $characters(); track character.id){
+  <app-game-character [character]="character"></app-game-character>
+  }@empty {
+  <p>No data to display</p>
+  }
+</div>
+} }
